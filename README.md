@@ -1,5 +1,5 @@
 # Python mode for Processing (a.k.a. [Processing.py](http://py.processing.org)) support for Atom.
-[Converted](http://atom.io/docs/latest/converting-a-text-mate-bundle)
+[Converted](http://flight-manual.atom.io/hacking-atom/sections/converting-from-textmate)
 from the Sublime Text [Processing.py](https://github.com/tildebyte/processing-py-sublime) package (which, iirc, was itself probably converted from the Sublime Text [Processing](https://packagecontrol.io/packages/Processing) package).
 
 ### What is it?
