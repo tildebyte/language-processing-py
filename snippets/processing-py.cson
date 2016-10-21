@@ -1,0 +1,816 @@
+".source.python.pyde":
+  Array:
+    prefix: "array"
+    body: "${1:int}[] ${2:numbers} ${6:= new $1[${3:length}]}"
+  ArrayList:
+    prefix: "arraylist"
+    body: "ArrayList<${1:String}> ${2:arraylist} = new ArrayList<$1>()"
+  arrayCopy:
+    prefix: "arraycopy"
+    body: "arrayCopy(${1:src}, ${2:dest}, ${4:, ${3:length}})"
+  copy:
+    prefix: "copy"
+    body: "copy(${10:${9:srcImg}, }${1:x}, ${2:y}, ${3:width}, ${4:height}, ${5:dx}, ${6:dy}, ${7:dwidth}, ${8:dheight})"
+  "var vector":
+    prefix: "vec"
+    body: "PVector ${1:v} = new PVector(${2})"
+  "var vector xy":
+    prefix: "vec"
+    body: "PVector ${1:v} = new PVector(${2:x},${3:y})"
+  "var vector xyz":
+    prefix: "vec"
+    body: "PVector ${1:v} = new PVector(${2:x},${3:y},${4:z})"
+  "vertex 3D":
+    prefix: "vertex"
+    body: "vertex(${1:x}, ${2:y}, ${3:z}${6:, ${4:u}, ${5:v}})"
+  PFont:
+    prefix: "font"
+    body: '''
+      PFont ${1:font};
+      $1 = loadFont(${3:"${2:FFScala-32.vlw}"})
+    '''
+  PGraphics:
+    prefix: "pgraphics"
+    body: '''
+      PGraphics pg;
+      pg = createGraphics(${5:${1:width}, ${2:height}${4:, ${3:applet}}})
+    '''
+  PImage:
+    prefix: "pimage"
+    body: "PImage(${1:width}, ${2:height})"
+  abs:
+    prefix: "abs"
+    body: "abs(${1:value})"
+  acos:
+    prefix: "acos"
+    body: "acos(${1:value})"
+  alpha:
+    prefix: "alpha"
+    body: "alpha(${1:color})"
+  ambient:
+    prefix: "material"
+    body: "ambient(${8:${3:value1}, ${4:value2}, ${5:value3}})"
+  ambientLight:
+    prefix: "light"
+    body: "ambientLight(${1:v1}, ${2:v2}, ${3:v3}${7:, ${4:x}, ${5:y}, ${6:z}})"
+  append:
+    prefix: "append"
+    body: "append(${1:array}, ${2:element})"
+  arc:
+    prefix: "arc"
+    body: "arc(${1:x}, ${2:y}, ${3:width}, ${4:height}, ${5:start}, ${6:stop})"
+  asin:
+    prefix: "asin"
+    body: "asin(${1:value})"
+  atan:
+    prefix: "atan"
+    body: "atan(${1:value})"
+  atan2:
+    prefix: "atan2"
+    body: "atan2(${1:y},${2:x})"
+  "background grey alpha":
+    prefix: "background"
+    body: "background(${1:grey}, ${2:alpha})"
+  "background grey":
+    prefix: "background"
+    body: "background(${1:grey})"
+  "background rgb":
+    prefix: "background"
+    body: "background(${1:red}, ${2:green}, ${3:blue})"
+  "background rgba":
+    prefix: "background"
+    body: "background(${1:red}, ${2:green}, ${3:blue}, ${6:alpha})"
+  background:
+    prefix: "background"
+    body: "background(${8:${3:value1}, ${4:value2}, ${5:value3}${7:, ${6:alpha}}})"
+  beginGL:
+    prefix: "begingl"
+    body: '''
+      pgl.beginGL();
+      $1
+      pgl.endGL()
+    '''
+  beginRecord:
+    prefix: "file"
+    body: "beginRecord(${1:renderer}, ${2:filename})"
+  beginShape:
+    prefix: "beginshape"
+    body: "beginShape(${1:kind})"
+  bezier:
+    prefix: "bezier"
+    body: "bezier(${1:x1}, ${2:y1}, ${3:cx1}, ${4:cy1}, ${5:cx2}, ${6:cy2}, ${7:x2}, ${8:y2})"
+  bezier3D:
+    prefix: "bezier"
+    body: "bezier(${1:x1}, ${2:y1}, ${3:z1}, ${4:cx1}, ${5:cy1}, ${6:cz1}, ${7:cx2}, ${8:cy2}, ${9:cz2}, ${10:x2}, ${11:y2}, ${12:z2})"
+  bezierDetail:
+    prefix: "bezier"
+    body: "bezierDetail(${1:detail})"
+  bezierPoint:
+    prefix: "bezier"
+    body: "bezierPoint(${1:a}, ${1:b}, ${1:c}, ${1:d}, ${1:t})"
+  bezierTangent:
+    prefix: "bezier"
+    body: "bezierTangent(${1:a}, ${1:b}, ${1:c}, ${1:d}, ${1:t})"
+  "bezierVertex 3D":
+    prefix: "beziervertex"
+    body: "bezierVertex(${1:cx1}, ${2:cy1}, ${3:cz1}, ${4:cx2}, ${5:cy2}, ${6:cz2}, ${7:x}, ${8:y}, ${9:z})"
+  bezierVertex:
+    prefix: "beziervertex"
+    body: "bezierVertex(${1:cx1}, ${2:cy1}, ${3:cx2}, ${4:cy2}, ${5:x}, ${6:y})"
+  blue:
+    prefix: "blue"
+    body: "blue(${1:color})"
+  box:
+    prefix: "box"
+    body: "box(${4:${1:width}, ${2:height}, ${3:depth}})"
+  brightness:
+    prefix: "brightness"
+    body: "brightness(${1:color})"
+  camera:
+    prefix: "camera"
+    body: "camera(${10:${1:eyeX}, ${2:eyeY}, ${3:eyeZ}, ${4:centerX}, ${5:centerY}, ${6:centerZ}, ${7:upX}, ${8:upY}, ${9:upZ}})"
+  ceil:
+    prefix: "ceil"
+    body: "ceil(${1:value})"
+  color:
+    prefix: "color"
+    body: "${1:c} ${6:= color(${3:value1}, ${4:value2}, ${5:value3})}"
+  concat:
+    prefix: "concat"
+    body: "concat(${1:array1}, ${2:array2})"
+  constrain:
+    prefix: "constrain"
+    body: "constrain(${1:value}, ${2:min}, ${3:max})"
+  cos:
+    prefix: "cos"
+    body: "cos(${1:rad})"
+  createReader:
+    prefix: "file"
+    body: "createReader(${1:filename})"
+  createShape:
+    prefix: "createshape"
+    body: "createShape(${1:type})"
+  createWriter:
+    prefix: "file"
+    body: "createWriter(${1:filename})"
+  "curve 3D":
+    prefix: "curve"
+    body: "curve(${1:x1}, ${2:y1}, ${3:z1}, ${4:x2}, ${5:y2}, ${6:z2}, ${7:x3}, ${8:y3}, ${9:z3}, ${10:x4}, ${11:y4}, ${12:z4})"
+  curve:
+    prefix: "curve"
+    body: "curve(${1:x1}, ${2:y1}, ${3:x2}, ${4:y2}, ${5:x3}, ${6:y3}, ${7:x4}, ${8:y4})"
+  curveDetail:
+    prefix: "curve"
+    body: "curveDetail(${1:detail})"
+  curvePoint:
+    prefix: "curve"
+    body: "curvePoint(${1:a}, ${1:b}, ${1:c}, ${1:d}, ${1:t})"
+  curveTightness:
+    prefix: "curve"
+    body: "curveTightness(${1:squishy})"
+  "curveVertex 3D":
+    prefix: "curveVertex"
+    body: "curveVertex(${1:x}, ${2:y}, ${3:z})"
+  curveVertex:
+    prefix: "curveVertex"
+    body: "curveVertex(${1:x}, ${2:y})"
+  degrees:
+    prefix: "degrees"
+    body: "degrees(${1:rad})"
+  directionalLight:
+    prefix: "light"
+    body: "directionalLight(${1:v1}, ${2:v2}, ${3:v3}, ${4:nx}, ${5:ny}, ${6:nz})"
+  "dist 3D":
+    prefix: "dist"
+    body: "dist(${1:x1}, ${2:y1}, ${3:z1}, ${4:x2}, ${5:y2}, ${6:z2})"
+  dist:
+    prefix: "dist"
+    body: "dist(${1:x1}, ${2:y1}, ${4:x2}, ${5:y2})"
+  ellipse:
+    prefix: "ellipse"
+    body: "ellipse(${1:x}, ${2:y}, ${3:width}, ${4:height})"
+  ellipseMode:
+    prefix: "ellipseMode"
+    body: "ellipseMode(${1:CENTER})"
+  emissive:
+    prefix: "material"
+    body: "emissive(${8:${3:value1}, ${4:value2}, ${5:value3}})"
+  endShape:
+    prefix: "endshape"
+    body: "endShape(${1:mode})"
+  exp:
+    prefix: "exp"
+    body: "exp(${1:value})"
+  expand:
+    prefix: "expand"
+    body: "expand(${1:array}${3:, ${2:newSize}})"
+  "fill grey alpha":
+    prefix: "fill"
+    body: "fill(${1:grey}, ${2:alpha})"
+  "fill grey":
+    prefix: "fill"
+    body: "fill(${1:grey})"
+  "fill rgb":
+    prefix: "fill"
+    body: "fill(${1:red}, ${2:green}, ${3:blue})"
+  "fill rgba":
+    prefix: "fill"
+    body: "fill(${1:red}, ${2:green}, ${3:blue}, ${6:alpha})"
+  fill:
+    prefix: "fill"
+    body: "fill(${8:${3:value1}, ${4:value2}, ${5:value3}${7:, ${6:alpha}}})"
+  floor:
+    prefix: "floor"
+    body: "floor(${1:value})"
+  "frameRate (set)":
+    prefix: "framerate"
+    body: "frameRate($0)"
+  frustum:
+    prefix: "camera"
+    body: "frustrum(${7:${1:left}, ${2:right}, ${3:bottom}, ${4:top}, ${5:near}, ${6:far}})"
+  "get pixel":
+    prefix: "get"
+    body: "get(${6:${1:x}, ${2:y}${5:, ${3:width}, ${4:height}}})"
+  get:
+    prefix: "get"
+    body: '''
+      public ${1:String} get${2/./\\u$0/}() {
+          return ${2:fieldName};
+      }
+      
+    '''
+  glBindBuffer:
+    prefix: "glbindbuffer"
+    body: '''
+      ${2:// A buffer ID of zero unbinds a buffer object}
+      gl.glBindBuffer(GL.GL_ARRAY_BUFFER, ${1:0})
+    '''
+  glCallList:
+    prefix: "glcalllist"
+    body: '''
+      // execute a display list
+      gl.glCallList(${1:list})
+    '''
+  glClear:
+    prefix: "glclear"
+    body: "gl.glClear(${1:GL.GL_COLOR_BUFFER_BIT}${3: | ${2:GL.GL_DEPTH_BUFFER_BIT}})"
+  glClearColor:
+    prefix: "glclearcolor"
+    body: "gl.glClearColor(${1:red}, ${2:green}, ${3:blue}, ${4:alpha})"
+  glColor3f:
+    prefix: "glcolor3f"
+    body: "gl.glColor3f(${1:red}, ${2:green}, ${3:blue})"
+  glColor4f:
+    prefix: "glcolor4f"
+    body: "gl.glColor4f(${1:red}, ${2:green}, ${3:blue}, ${4:alpha})"
+  glDeleteBuffers:
+    prefix: "gldeletebuffers"
+    body: '''
+      ${3:// Parameters are the same for glGenBuffers}
+      gl.glDeleteBuffers(${1:4}, ${2:bufferObjects})
+    '''
+  glDepthMask:
+    prefix: "gldepthmask"
+    body: '''
+      // enable or disable writing into the depth buffer
+      gl.glDepthMask(${1:flag})
+    '''
+  glFlush:
+    prefix: "glflush"
+    body: '''
+      // Empties buffers. Call this when all previous issues commands completed
+      gl.glFlush()
+    '''
+  glGenBuffers:
+    prefix: "glgenbuffers"
+    body: '''
+      // import java.nio.IntBuffer;
+      // import java.nio.FloatBuffer;
+      // import com.sun.opengl.util.BufferUtil;
+      
+      // You might need to create four buffers to store vertext data, normal data, texture coordinate data, and indices in vertex arrays
+      IntBuffer bufferObjects = IntBuffer.allocate(${1:4});
+      gl.glGenBuffers($1, bufferObjects);
+      
+      int vertexCount = ${2:3};
+      int numCoordinates = ${3:3};
+      // vertexCount * numCoordinates
+      FloatBuffer vertices = BufferUtil.newFloatBuffer(vertexCount * numCoordinates);
+      float[] v = {0.0f, 0.0f, 0.0f,
+                   1.0f, 0.0f, 0.0f,
+                   0.0f, 1.0f, 1.0f};
+      vertices.put(v);
+      
+      // Bind the first buffer object ID for use with vertext array data
+      gl.glBindBuffer(GL.GL_ARRAY_BUFFER, bufferObjects.get(0));
+      gl.glBufferData(GL.GL_ARRAY_BUFFER, vertexCount * numCoordinates * BufferUtil.SIZEOF_FLOAT, vertices, GL.GL_STATIC_DRAW)
+    '''
+  glGenLists:
+    prefix: "glgenlists"
+    body: "gl.glGenLists(${1:1})"
+  glGetError:
+    prefix: "glgeterror"
+    body: "println(gl.glGetError())"
+  glLoadIdentity:
+    prefix: "glloadidentity"
+    body: '''
+      // replaces the top of the active matrix stack with the identity matrix
+      gl.glLoadIdentity()
+    '''
+  glPushMatrix:
+    prefix: "glpushmatrix"
+    body: '''
+      // spush and pop the current matrix stack
+      gl.glPushMatrix();
+      $1
+      gl.glPopMatrix()
+    '''
+  glRotatef:
+    prefix: "glrotatef"
+    body: '''
+      // rotation in degrees, x coordinate of a vector, y coord., z coord.
+      gl.glRotatef(${1:deg}, ${2:x}, ${3:y}, ${4:z})
+    '''
+  glScalef:
+    prefix: "glscalef"
+    body: '''
+      // multiply the current matrix by a general scaling matrix
+      gl.glScalef(${1:x}, ${2:y}, ${3:z})
+    '''
+  glTexCoord2f:
+    prefix: "gltexcoord2f"
+    body: '''
+      // set the current texture coordinates - 2 floats
+      gl.glTexCoord2f(${1:0.0f}, ${2:0.0f})
+    '''
+  glTranslatef:
+    prefix: "gltranslatef"
+    body: '''
+      // multiply the current matrix by a translation matrix
+      gl.glTranslatef(${1:x}, ${2:y}, ${3:z})
+    '''
+  glVertex2f:
+    prefix: "glvertex2f"
+    body: "gl.glVertex2f(${1:0.0f}, ${2:0.0f})"
+  glVertex3f:
+    prefix: "glvertex3f"
+    body: "gl.glVertex3f(${1:0.0f}, ${2:0.0f}, ${3:0.0f})"
+  green:
+    prefix: "green"
+    body: "green(${1:color})"
+  hex:
+    prefix: "hex"
+    body: "hex(${3:c})"
+  hue:
+    prefix: "hue"
+    body: "hue(${1:color})"
+  image:
+    prefix: "image"
+    body: "image(${1:img}, ${2:x}, ${3:y}${6:, ${4:width}, ${5:height}})"
+  join:
+    prefix: "join"
+    body: "join(${3:strgArray}, ${4:seperator})"
+  keyReleased:
+    prefix: "key"
+    body: '''
+      void keyReleased() {
+      	${1}
+      }
+    '''
+  keyTyped:
+    prefix: "key"
+    body: '''
+      void keyTyped() {
+      	${1}
+      }
+    '''
+  lerp:
+    prefix: "lerp"
+    body: "lerp(${1:value1}, ${2:value2}, ${3:amt})"
+  lerpColor:
+    prefix: "lerpcolor"
+    body: "lerpColor(${1:c1}, ${2:c2}, ${3:amt})"
+  lightFalloff:
+    prefix: "light"
+    body: "lightFalloff(${1:constant}, ${2:linear}, ${3:quadratic})"
+  lightSpecular:
+    prefix: "light"
+    body: "lightFalloff(${1:v1}, ${2:v2}, ${3:v3})"
+  "line 3d":
+    prefix: "line"
+    body: "line(${1:x1}, ${2:y1}, ${3:z1}, ${4:x2}, ${5:y2}, ${6:z2})"
+  line:
+    prefix: "line"
+    body: "line(${1:x1}, ${2:y1}, ${3:x2}, ${4:y2})"
+  link:
+    prefix: "link"
+    body: "link(${1:url}${4:, ${3:target}})"
+  loadBytes:
+    prefix: "load"
+    body: "loadBytes(${2:\"${1:filename}\"})"
+  loadFont:
+    prefix: "font"
+    body: "${1:font} = loadFont(${3:\"${2:FFScala-32.vlw}\"})"
+  loadImage:
+    prefix: "loadimage"
+    body: "loadImage(${1:filename})"
+  loadShape:
+    prefix: "loadshape"
+    body: "loadShape(${1:filename})"
+  loadStrings:
+    prefix: "load"
+    body: "loadStrings(${2:\"${1:filename}\"})"
+  loadXML:
+    prefix: "loadx"
+    body: "loadXML(${2:\"${1:filename}\"})"
+  log:
+    prefix: "log"
+    body: "log(${1:value})"
+  mag:
+    prefix: "mag"
+    body: "mag(${1:a}, ${2:b}${4:, ${3:c}})"
+  map:
+    prefix: "map"
+    body: "map(${1:value}, ${2:low1}, ${4:high1}, ${5:low2}, ${6:high2})"
+  match:
+    prefix: "match"
+    body: "match(${3:str}, ${4:regexp})"
+  max:
+    prefix: "max"
+    body: "max(${1:value1}, ${2:value2})"
+  min:
+    prefix: "min"
+    body: "min(${1:value1}, ${2:value2}${4:, ${3:value3}})"
+  modelX:
+    prefix: "coordinates"
+    body: "modelX(${1:x}, ${2:y}, ${3:z})"
+  modelY:
+    prefix: "coordinates"
+    body: "modelY(${1:x}, ${2:y}, ${3:z})"
+  modelZ:
+    prefix: "coordinates"
+    body: "modelZ(${1:x}, ${2:y}, ${3:z})"
+  mouseDragged:
+    prefix: "mouse"
+    body: '''
+      void mouseDragged() {
+      	${1}
+      }
+    '''
+  mouseMoved:
+    prefix: "mouse"
+    body: '''
+      void mouseMoved() {
+      	${1}
+      }
+    '''
+  mousePressed:
+    prefix: "mouse"
+    body: '''
+      void mousePressed() {
+      	${1}
+      }
+    '''
+  mouseReleased:
+    prefix: "mouse"
+    body: '''
+      void mouseReleased() {
+      	${1}
+      }
+    '''
+  nf:
+    prefix: "nf"
+    body: "nf(${3:value}, ${4:left}${6:, ${5:right}})"
+  nfc:
+    prefix: "nfc"
+    body: "nfc(${3:value}${5:, ${4:right}})"
+  nfp:
+    prefix: "nfp"
+    body: "nfp(${3:value}, ${4:left}${6:, ${5:right}})"
+  nfs:
+    prefix: "nfs"
+    body: "nfs(${3:value}, ${4:left}${6:, ${5:right}})"
+  noise:
+    prefix: "noise"
+    body: "noise(${1:x}${5:, ${2:y}${4:, ${3:z}}})"
+  noiseDetail:
+    prefix: "noisedetail"
+    body: "noiseDetail(${1:octaves}${4:, ${3:falloff}})"
+  noiseSeed:
+    prefix: "noiseseed"
+    body: "noiseSeed(${1:x})"
+  norm:
+    prefix: "norm"
+    body: "norm(${1:value}, ${2:low}, ${3:high})"
+  normal:
+    prefix: "light"
+    body: "normal(${1:nx}, ${2:ny}, ${3:nz})"
+  ortho:
+    prefix: "camera"
+    body: "ortho(${7:${1:left}, ${2:right}, ${3:bottom}, ${4:top}, ${5:near}, ${6:far}})"
+  parseXML:
+    prefix: "parse"
+    body: "parseXML(${1:rawString})"
+  perspective:
+    prefix: "camera"
+    body: "perspective(${5:${1:fov}, ${2:aspect}, ${3:zNear}, ${4:zFar}})"
+  pixels:
+    prefix: "pixels"
+    body: "pixels[${1:index}]"
+  point:
+    prefix: "point"
+    body: "point(${1:x}, ${2:y}${4:, ${3:z}})"
+  pointLight:
+    prefix: "light"
+    body: "pointLight(${1:v1}, ${2:v2}, ${3:v3}, ${4:nx}, ${5:ny}, ${6:nz})"
+  pow:
+    prefix: "pow"
+    body: "pow(${1:num}, ${2:exponent})"
+  "println var":
+    prefix: "println"
+    body: "println('${1:var}: ' + ${1:var})$0"
+  "println text":
+    prefix: "println"
+    body: "println('$1')$0"
+  quad:
+    prefix: "quad"
+    body: "quad(${1:x1}, ${2:y1}, ${3:x2}, ${4:y2}, ${5:x3}, ${6:y3}, ${7:x4}, ${8:y4})"
+  radians:
+    prefix: "radians"
+    body: "radians(${1:deg})"
+  random:
+    prefix: "random"
+    body: "random(${1:value1}${3:, ${2:value2}})"
+  randomSeed:
+    prefix: "random"
+    body: "randomSeed(${1:value})"
+  rect:
+    prefix: "rect"
+    body: "rect(${1:x}, ${2:y}, ${3:width}, ${4:height})"
+  rectMode:
+    prefix: "rect"
+    body: "rectMode(${1:CENTER})"
+  red:
+    prefix: "red"
+    body: "red(${1:color})"
+  resetMatrix:
+    prefix: "matrix"
+    body: "translate(${1:x}, ${2:y}, ${3:z})"
+  reverse:
+    prefix: "reverse"
+    body: "reverse(${1:array})"
+  rotate:
+    prefix: "rotate"
+    body: "rotate(${1:rad})"
+  rotateX:
+    prefix: "rotateX"
+    body: "rotateX(${1:rad})"
+  rotateY:
+    prefix: "rotate"
+    body: "rotateY(${1:rad})"
+  rotateZ:
+    prefix: "rotate"
+    body: "rotateZ(${1:rad})"
+  round:
+    prefix: "round"
+    body: "round(${1:value})"
+  saturation:
+    prefix: "saturation"
+    body: "saturation(${1:color})"
+  save:
+    prefix: "save"
+    body: "saveFrame(${2:\"${1:filename}\"})"
+  saveBytes:
+    prefix: "file"
+    body: "saveBytes(${1:filename}, ${2:bytes})"
+  saveFrame:
+    prefix: "save"
+    body: "saveFrame(${2:\"${1:filename-####.ext}\"})"
+  saveStrings:
+    prefix: "file"
+    body: "saveStrings(${1:filename}, ${2:strings})"
+  saveXML:
+    prefix: "savex"
+    body: "saveXML(${1:xml}, ${2:filename})"
+  "scale SIZE":
+    prefix: "scale"
+    body: "scale(${1:size})"
+  scale:
+    prefix: "scale"
+    body: "scale(${1:x}, ${2:y}${4:, ${3:z}})"
+  screenX:
+    prefix: "coordinates"
+    body: "screenX(${1:x}, ${2:y}, ${3:z})"
+  screenY:
+    prefix: "coordinates"
+    body: "screenY(${1:x}, ${2:y}, ${3:z})"
+  screenZ:
+    prefix: "coordinates"
+    body: "screenZ(${1:x}, ${2:y}, ${3:z})"
+  "set pixel":
+    prefix: "set"
+    body: "set(${1:x}, ${2:y}, ${3:color/image})"
+  set:
+    prefix: "set"
+    body: '''
+      public void set${1/./\\u$0/}(${2:String} new${1/./\\u$0/}) {
+          ${1:fieldName} = new${1/./\\u$0/};
+      }
+      
+    '''
+  setSwapInterval:
+    prefix: "glswapinterval"
+    body: '''
+      // specify the minimum swap interval for buffer swaps.
+      gl.setSwapInterval(${1:interval})
+    '''
+  "setup OpenGL":
+    prefix: "setup"
+    body: '''
+      import processing.opengl.*;
+      import javax.media.opengl.*;
+      
+      PGraphicsOpenGL pgl;
+      GL gl;
+      
+      void setup() {
+      	size( ${1:300}, ${2:300}, OPENGL );
+      	colorMode( RGB, 1.0 );
+      	hint( ENABLE_OPENGL_4X_SMOOTH );
+      	pgl = (PGraphicsOpenGL) g;
+      	gl = pgl.gl;
+      	gl.setSwapInterval(1);
+      	initGL();
+      	$3
+      }
+      
+      void draw() {
+      	pgl.beginGL();
+        	$4
+      	pgl.endGL();
+      	getOpenGLErrors();
+      }
+      
+      void initGL() {
+      	$5
+      }
+      
+      void getOpenGLErrors() {
+        int error = gl.glGetError();
+        switch (error) {
+          case 1280 :
+            println("GL_INVALID_ENUM - An invalid enumerant was passed to an OpenGL command.");
+          break;
+          case 1282 :
+            println("GL_INVALID_OPERATION - An OpenGL command was issued that was invalid or inappropriate for the current state.");
+          break;
+          case 1281 :
+            println("GL_INVALID_VALUE - A value was passed to OpenGL that was outside the allowed range.");
+          break;
+          case 1285 :
+            println("GL_OUT_OF_MEMORY - OpenGL was unable to allocate enough memory to process a command.");
+          break;
+          case 1283 :
+            println("GL_STACK_OVERFLOW - A command caused an OpenGL stack to overflow.");
+          break;
+          case 1284 :
+            println("GL_STACK_UNDERFLOW - A command caused an OpenGL stack to underflow.");
+          break;
+          case 32817 :
+            println("GL_TABLE_TOO_LARGE");
+          break;
+        }
+      }
+    '''
+  setup:
+    prefix: "setup"
+    body: '''
+      void setup() {
+      	$1
+      }
+      
+      void draw() {
+      	$0
+      }
+      
+    '''
+  shape:
+    prefix: "shape"
+    body: "shape(${1:s}, ${2:x}, ${3:y}, ${4:w}, ${5:h})"
+  shapeMode:
+    prefix: "shapemode"
+    body: "shapeMode(${1:CENTER})"
+  shininess:
+    prefix: "material"
+    body: "shininess(${1:shine})"
+  shorten:
+    prefix: "shorten"
+    body: "shorten(${1:array})"
+  sin:
+    prefix: "sin"
+    body: "sin(${1:rad})"
+  "size OPENGL":
+    prefix: "size"
+    body: "size(${1:200}, ${2:200}${3:, OPENGL})"
+  size:
+    prefix: "size"
+    body: "size(${1:512}, ${2:512})"
+  sort:
+    prefix: "sort"
+    body: "sort(${1:dataArray}${3:, ${2:count}})"
+  specular:
+    prefix: "material"
+    body: "specular(${8:${3:value1}, ${4:value2}, ${5:value3}${7:, ${6:alpha}}})"
+  sphere:
+    prefix: "sphere"
+    body: "sphere(${1:radius})"
+  sphereDetail:
+    prefix: "sphere"
+    body: "sphereDetail(${1:n})"
+  splice:
+    prefix: "splice"
+    body: "splice(${1:array}, ${2:value/array2}, ${3:index})"
+  split:
+    prefix: "split"
+    body: "split(${3:str}, ${4:delimiter})"
+  splitTokens:
+    prefix: "split"
+    body: "splitTokens(${3:str}${5:, ${4:tokens}})"
+  spotLight:
+    prefix: "light"
+    body: "spotLight(${1:v1}, ${2:v2}, ${3:v3}, ${4:x}, ${5:y}, ${6:z}, ${7:nx}, ${8:ny}, ${9:nz}, ${10:angle}, ${11:concentration})"
+  sq:
+    prefix: "sq"
+    body: "sq(${1:value})"
+  sqrt:
+    prefix: "sqrt"
+    body: "sqrt(${1:value})"
+  status:
+    prefix: "status"
+    body: "status(${1:text})"
+  str:
+    prefix: "str"
+    body: "str(${3:\"${1:str}\"})"
+  "stroke grey alpha":
+    prefix: "stroke"
+    body: "stroke(${1:grey}, ${2:alpha})"
+  "stroke grey":
+    prefix: "stroke"
+    body: "stroke(${1:grey})"
+  "stroke rgb":
+    prefix: "stroke"
+    body: "stroke(${1:red}, ${2:green}, ${3:blue})"
+  "stroke rgba":
+    prefix: "stroke"
+    body: "stroke(${1:red}, ${2:green}, ${3:blue}, ${6:alpha})"
+  stroke:
+    prefix: "stroke"
+    body: "stroke(${8:${3:value1}, ${4:value2}, ${5:value3}${7:, ${6:alpha}}})"
+  strokeWeight:
+    prefix: "stroke"
+    body: "strokeWeight(${1:1})"
+  subset:
+    prefix: "subset"
+    body: "subset(${1:array}, ${2:offset})"
+  tan:
+    prefix: "tan"
+    body: "tan(${1:rad})"
+  "text data":
+    prefix: "text"
+    body: "text(${1:data}, ${2:x}, ${3:y}${5:, ${4:z}})"
+  "text stringdata":
+    prefix: "text"
+    body: "text(${1:stringdata}, ${2:x}, ${3:y}, ${4:width}, ${5:height}${7:, ${6:z}})"
+  textFont:
+    prefix: "text"
+    body: "textFont(${1:font}${7:, ${6:size}})"
+  textLeading:
+    prefix: "text"
+    body: "textLeading(${1:size})"
+  textSize:
+    prefix: "text"
+    body: "textSize(${1:size})"
+  textWidth:
+    prefix: "text"
+    body: "textWidth(${1:data})"
+  tint:
+    prefix: "tint"
+    body: "tint(${8:${3:value1}, ${4:value2}, ${5:value3}${7:, ${6:alpha}}})"
+  translate:
+    prefix: "translate"
+    body: "translate(${1:x}, ${2:y}${4:, ${3:z}})"
+  triangle:
+    prefix: "triangle"
+    body: "triangle(${1:x1}, ${2:y1}, ${3:x2}, ${4:y2}, ${5:x3}, ${6:y3})"
+  trim:
+    prefix: "trim"
+    body: "trim(${3:str})"
+  unbinary:
+    prefix: "unbinary"
+    body: "unbinary(${3:\"${1:str}\"})"
+  unhex:
+    prefix: "unhex"
+    body: "unhex(${3:c})"
+  vertex:
+    prefix: "vertex"
+    body: "vertex(${1:x}, ${2:y}${5:, ${3:u}, ${4:v}})"
